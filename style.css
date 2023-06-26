@@ -1,0 +1,158 @@
+/* Provided Styles */
+.attribution {
+  margin-top: -1rem;
+  font-size: 11px;
+  color: black;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* My Custom Styles */
+:root {
+  /* Colors */
+  --bright-orange: hsl(31, 77%, 52%); /* article 1 background colors */
+  --dark-cyan: hsl(184, 100%, 22%); /* article 2 background colors */
+  --very-dark-cyan: hsl(179, 100%, 13%); /* article 3 background colors */
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+
+  /* Fonts */
+  --font-size: 15px;
+  --font-big-shoulders: "Big Shoulders Display", cursive;
+  --font-lexend-deca: "Lexend Deca", sans-serif;
+
+  /* Styles */
+  --article-margin: 1.6em;
+  --article-border-radius: 8px;
+  --article-padding: 3.3em 3.3em;
+  --button-border-radius: 25px;
+  --button-padding: 0.7em 1.8em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: var(--font-lexend-deca);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--transparent-white);
+  background-color: var(--very-light-gray);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex-grow: 1;
+  padding: 5.7em 0 5.7em 0;
+}
+
+main article {
+  background-color: var(--dark-cyan);
+  margin: 0 var(--article-margin);
+  padding: var(--article-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+main article:first-child {
+  background-color: var(--bright-orange);
+  border-radius: var(--article-border-radius) var(--article-border-radius) 0 0;
+}
+
+main article:last-child {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 var(--article-border-radius) var(--article-border-radius);
+}
+
+main article h1 {
+  margin: 0.95em 0 0.7em 0;
+  font-family: var(--font-big-shoulders);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+main article button {
+  cursor: pointer;
+  margin-top: 1.6em;
+  padding: var(--button-padding);
+  background-color: var(--very-light-gray);
+  font-size: 16px;
+  color: var(--dark-cyan);
+  border: 2px solid transparent;
+  border-radius: var(--button-border-radius);
+}
+
+main article button:hover,
+main article button:focus {
+  border: 2px solid var(--very-light-gray);
+  background-color: transparent;
+}
+
+main article button:hover p,
+main article button:focus p {
+  color: var(--very-light-gray);
+}
+
+main article:first-child button {
+  color: var(--bright-orange);
+}
+
+main article:last-child button {
+  color: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    margin-top: 3em;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 0;
+  }
+
+  main article {
+    height: 500px;
+    width: 305px;
+    margin: 0;
+  }
+
+  main article:first-child {
+    border-radius: var(--article-border-radius) 0 0 var(--article-border-radius);
+  }
+
+  main article:last-child {
+    border-radius: 0 var(--article-border-radius) var(--article-border-radius) 0;
+  }
+
+  main article button {
+    margin-top: 5.5em;
+  }
+}
