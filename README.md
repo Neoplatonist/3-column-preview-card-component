@@ -40,9 +40,11 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Neoplatonist/3-column-preview-card-component)
-- Live Site URL: [Github Pages](https://your-live-site-url.com)
+- Live Site URL: [Github Pages](https://neoplatonist.github.io/3-column-preview-card-component/)
 
 ## My process
+
+As part of my development process, I utilize a dual-tabbed web browser window to compare my live environment with a provided image. By enabling web tools for both tabs and setting the mode to mobile development with a target mobile width, I am able to achieve a tracing paper-like experience for achieving near-perfect code-to-image matching. Once the mobile development is complete, I scale the live environment upwards to identify any breakpoints and address any issues that arise until the targeted desktop dimensions are achieved.
 
 ### Built with
 
