@@ -115,8 +115,8 @@ main article button:focus {
   background-color: transparent;
 }
 
-main article button:hover p,
-main article button:focus p {
+main article button:hover span,
+main article button:focus span {
   color: var(--very-light-gray);
 }
 
